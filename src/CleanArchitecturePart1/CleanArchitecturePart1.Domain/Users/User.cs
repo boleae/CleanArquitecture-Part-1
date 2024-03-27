@@ -1,5 +1,6 @@
 using System.Security.Cryptography.X509Certificates;
 using ClearArchitecture.Domain.Abstractions;
+using ClearArchitecture.Domain.Users.Events;
 
 namespace ClearArchitecture.Domain.Users;
 
@@ -27,6 +28,7 @@ public sealed class User : Entity
     )
     {
         var user = new User(Guid.NewGuid(), nombre, apellido, email);
+        user.RaiseDomainEvent(new UserCreatedDomainEvent(user.Id));
         return user;
 
     }
