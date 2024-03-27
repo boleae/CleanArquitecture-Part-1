@@ -6,9 +6,9 @@ public class PrecioService
 {
     public PrecioDetalle CalcularPrecio(Vehiculo vehiculo, DateRange periodo)
     {
-        var moneda = vehiculo.Precio!.tipoMoneda;
+        var moneda = vehiculo.Precio!.TipoMoneda;
         var precioPorPeriodo = new Moneda(
-            periodo.CantidadDias * vehiculo.Precio.monto, 
+            periodo.CantidadDias * vehiculo.Precio.Monto, 
             moneda);
         decimal porcentageChange = 0;
 
@@ -27,7 +27,7 @@ public class PrecioService
 
         var accesorioCharges = Moneda.Zero(moneda);
         if(porcentageChange > 0)
-            accesorioCharges = new Moneda(precioPorPeriodo.monto * porcentageChange, moneda);
+            accesorioCharges = new Moneda(precioPorPeriodo.Monto * porcentageChange, moneda);
         
         var precioTotal = Moneda.Zero(moneda);
         precioTotal += precioPorPeriodo;

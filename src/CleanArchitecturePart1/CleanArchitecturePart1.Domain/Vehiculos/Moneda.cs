@@ -1,12 +1,12 @@
 namespace ClearArchitecture.Domain.Vehiculos;
 
-public record Moneda(decimal monto, TipoMoneda tipoMoneda)
+public record Moneda(decimal Monto, TipoMoneda TipoMoneda)
 {
     public static Moneda operator +(Moneda primero, Moneda segundo)
     {
-        if(primero.tipoMoneda != segundo.tipoMoneda)
+        if(primero.TipoMoneda != segundo.TipoMoneda)
             throw new InvalidOperationException("El tipo de moneda debe ser el mismo");
-        return new Moneda(primero.monto + segundo.monto, primero.tipoMoneda);
+        return new Moneda(primero.Monto + segundo.Monto, primero.TipoMoneda);
     }
 
     public static Moneda Zero() => new(0, TipoMoneda.None);

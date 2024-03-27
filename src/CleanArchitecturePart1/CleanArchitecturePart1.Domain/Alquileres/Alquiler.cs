@@ -56,10 +56,10 @@ public sealed class Alquiler : Entity
             vehiculoId,
             userId, 
             duracion,
-            precioDetalle.precioPorPeriodo,
-            precioDetalle.mantenimiento,
-            precioDetalle.accesorios,
-            precioDetalle.precioTotal,
+            precioDetalle.PrecioPorPeriodo,
+            precioDetalle.Mantenimiento,
+            precioDetalle.Accesorios,
+            precioDetalle.PrecioTotal,
             AlquilerStatus.Reservado,
             fechaCreacion
 
