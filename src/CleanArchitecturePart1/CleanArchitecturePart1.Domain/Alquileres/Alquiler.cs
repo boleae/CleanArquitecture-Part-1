@@ -1,13 +1,71 @@
 using ClearArchitecture.Domain.Abstractions;
+using ClearArchitecture.Domain.Alquileres.Events;
+using ClearArchitecture.Domain.Vehiculos;
 
 namespace ClearArchitecture.Domain.Alquileres;
 
 public sealed class Alquiler : Entity
 {
-    public Alquiler(Guid id) : base(id)
+    private Alquiler(Guid id,
+                    Guid vehiculoId,
+                    Guid userId,
+                    DateRange duration,
+                    Moneda precioPorPeriodo,
+                    Moneda mantenimiento,
+                    Moneda accesorios,
+                    Moneda precioTotal,
+                    AlquilerStatus status,
+                    DateTime fechaCreacion) : base(id)
     {
+        VehiculoId = vehiculoId;
+        UserId = userId;
+        Duracion = duration;
+        PrecioPorPeriodo = precioPorPeriodo;
+        Mantenimiento = mantenimiento;
+        Accesorios = accesorios;
+        PrecioTotal = precioTotal;
+        Status = status;
+        FechaCreacion = fechaCreacion;
 
     }
+    public Guid VehiculoId {get;private set;}
+    public Guid UserId {get;private set;}
 
-    public AlquilerStatus Statis {get;private set;}
+    public AlquilerStatus Status {get;private set;}
+    public DateRange? Duracion {get;private set;}
+    public DateTime? FechaCreacion {get;private set;}
+    public DateTime? FechaConfirmacion {get;private set;}
+    public DateTime? FechaNegacion {get;private set;}
+    public DateTime? FechaCompletado {get;private set;}
+    public DateTime? FechaCancelacion {get;private set;}
+    public Moneda? PrecioPorPeriodo {get;private set;}
+    public Moneda? Mantenimiento {get;private set;}
+    public Moneda? Accesorios {get;private set;}
+    public Moneda? PrecioTotal {get;private set;}
+
+    public static Alquiler Reservar(
+        Guid vehiculoId,
+        Guid userId,
+        DateRange duracion,
+        DateTime fechaCreacion,
+        PrecioDetalle precioDetalle
+    )
+    {
+        var alquiler = new Alquiler(
+            Guid.NewGuid(),
+            vehiculoId,
+            userId, 
+            duracion,
+            precioDetalle.precioPorPeriodo,
+            precioDetalle.mantenimiento,
+            precioDetalle.accesorios,
+            precioDetalle.precioTotal,
+            AlquilerStatus.Reservado,
+            fechaCreacion
+
+        );
+        alquiler.RaiseDomainEvent(new AlquilerReservadoDomainEvent(alquiler.Id));
+        return alquiler;
+
+    }
 }
