@@ -1,4 +1,4 @@
-namespace ClearArchitecture.Domain.Vehiculos;
+namespace ClearArchitecture.Domain.Shared;
 
 public record Moneda(decimal Monto, TipoMoneda TipoMoneda)
 {
