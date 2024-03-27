@@ -44,16 +44,20 @@ public sealed class Alquiler : Entity
     public Moneda? PrecioTotal {get;private set;}
 
     public static Alquiler Reservar(
-        Guid vehiculoId,
+        Vehiculo vehiculo,
         Guid userId,
         DateRange duracion,
         DateTime fechaCreacion,
-        PrecioDetalle precioDetalle
+        PrecioService precioService
     )
     {
+        var precioDetalle = precioService.CalcularPrecio(
+            vehiculo,
+            duracion
+        );
         var alquiler = new Alquiler(
             Guid.NewGuid(),
-            vehiculoId,
+            vehiculo.Id,
             userId, 
             duracion,
             precioDetalle.PrecioPorPeriodo,
@@ -65,7 +69,18 @@ public sealed class Alquiler : Entity
 
         );
         alquiler.RaiseDomainEvent(new AlquilerReservadoDomainEvent(alquiler.Id));
+        vehiculo.FechaUltimoAlquiler = fechaCreacion;
         return alquiler;
+
+    }
+
+    public Result Confirmar(DateTime utcNow) 
+    {
+        if(Status != AlquilerStatus.Reservado)
+        {
+
+        }
+        return Result.Success();
 
     }
 }

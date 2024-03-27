@@ -30,7 +30,7 @@ public sealed class Vehiculo : Entity
     public Moneda? Precio {get;private set;}
     public Moneda? Mantenimiento {get;private set;}
    
-    public DateTime? FechaUltimoAlquiler {get;private set;}
+    public DateTime? FechaUltimoAlquiler {get;internal set;}
     public List<Accesorio> Accesorios {get;private set;} = new();
 
 }
