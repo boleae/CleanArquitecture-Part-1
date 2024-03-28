@@ -1,3 +1,4 @@
+using ClearArchitecture.Application.Abstractions.Clock;
 using ClearArchitecture.Application.Abstractions.Messaging;
 using ClearArchitecture.Domain.Abstractions;
 using ClearArchitecture.Domain.Alquileres;
@@ -13,19 +14,22 @@ internal sealed class ReservarAlquilerCommandHandler : ICommandHandler<ReservarA
     private readonly IAlquilerRepository _alquilerRepository;
     private readonly PrecioService _precioService;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IDateTimeProvider _dateTimeProvider;
 
     public ReservarAlquilerCommandHandler(
         IUsersRepository userRepository, 
         IVehiculoRepository vehiculoRepository, 
         IAlquilerRepository alquilerRepository, 
         PrecioService precioService, 
-        IUnitOfWork unitOfWork)
+        IUnitOfWork unitOfWork,
+        IDateTimeProvider dateTimeProvider)
     {
         _userRepository = userRepository;
         _vehiculoRepository = vehiculoRepository;
         _alquilerRepository = alquilerRepository;
         _precioService = precioService;
         _unitOfWork = unitOfWork;
+        _dateTimeProvider = dateTimeProvider;
     }
 
     public async Task<Result<Guid>> Handle(ReservarAlquilerCommand request, CancellationToken cancellationToken)
@@ -47,7 +51,7 @@ internal sealed class ReservarAlquilerCommandHandler : ICommandHandler<ReservarA
             return Result.Failure<Guid>(AlquilerErrors.Overlap);
         }
 
-        var alquiler = Alquiler.Reservar(vehiculo, request.UserId, duracion, DateTime.UtcNow, _precioService);
+        var alquiler = Alquiler.Reservar(vehiculo, request.UserId, duracion, _dateTimeProvider.currentTime, _precioService);
         _alquilerRepository.Add(alquiler);
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 
