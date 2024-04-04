@@ -1,9 +1,9 @@
-using ClearArchitecture.Application.Abstractions.Email;
-using ClearArchitecture.Domain.Alquileres;
-using ClearArchitecture.Domain.Alquileres.Events;
+using CleanArchitecture.Application.Abstractions.Email;
+using CleanArchitecture.Domain.Alquileres;
+using CleanArchitecture.Domain.Alquileres.Events;
 using MediatR;
 
-namespace ClearArchitecture.Application.Alquileres.ReservarAlquiler;
+namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
 
 internal sealed class ReservarAlquilerDomainEventHandler
 : INotificationHandler<AlquilerReservadoDomainEvent>

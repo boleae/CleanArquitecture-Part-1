@@ -1,4 +1,4 @@
-namespace ClearArchitecture.Domain.Alquileres;
+namespace CleanArchitecture.Domain.Alquileres;
 
 public enum AlquilerStatus {
     Reservado = 1,

@@ -1,4 +1,4 @@
-using ClearArchitecture.Domain.Users;
+using CleanArchitecture.Domain.Users;
 
 public interface IUsersRepository 
 {

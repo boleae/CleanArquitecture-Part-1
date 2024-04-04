@@ -1,6 +1,6 @@
-using ClearArchitecture.Domain.Vehiculos;
+using CleanArchitecture.Domain.Vehiculos;
 
-namespace ClearArchitecture.Domain.Alquileres;
+namespace CleanArchitecture.Domain.Alquileres;
 
 public interface IAlquilerRepository 
 {

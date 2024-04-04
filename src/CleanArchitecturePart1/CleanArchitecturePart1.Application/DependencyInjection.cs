@@ -1,9 +1,9 @@
-using ClearArchitecture.Application.Abstractions.Behaviors;
-using ClearArchitecture.Domain.Alquileres;
+using CleanArchitecture.Application.Abstractions.Behaviors;
+using CleanArchitecture.Domain.Alquileres;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ClearArchitecture.Application;
+namespace CleanArchitecture.Application;
 
 public static class DependencyInjection
 {

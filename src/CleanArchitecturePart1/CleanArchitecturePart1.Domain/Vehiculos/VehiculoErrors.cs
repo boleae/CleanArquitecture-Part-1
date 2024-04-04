@@ -1,6 +1,6 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Vehiculos;
+namespace CleanArchitecture.Domain.Vehiculos;
 
 public static class VehiculoErrors
 {

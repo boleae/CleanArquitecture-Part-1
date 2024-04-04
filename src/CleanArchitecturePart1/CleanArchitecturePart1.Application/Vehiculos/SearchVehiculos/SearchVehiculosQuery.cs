@@ -1,6 +1,6 @@
-using ClearArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Application.Abstractions.Messaging;
 
-namespace ClearArchitecture.Application.Vehiculos.SearchVehiculos;
+namespace CleanArchitecture.Application.Vehiculos.SearchVehiculos;
 
 public sealed record SearchVehiculosQuery(
     DateOnly FechaInicio,

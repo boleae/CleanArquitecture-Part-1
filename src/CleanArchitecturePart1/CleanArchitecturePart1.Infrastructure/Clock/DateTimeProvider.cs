@@ -1,6 +1,6 @@
-using ClearArchitecture.Application.Abstractions.Clock;
+using CleanArchitecture.Application.Abstractions.Clock;
 
-namespace ClearArchitecture.Infrastructure.Clock;
+namespace CleanArchitecture.Infrastructure.Clock;
 
 internal sealed class DateTimeProvider : IDateTimeProvider
 {

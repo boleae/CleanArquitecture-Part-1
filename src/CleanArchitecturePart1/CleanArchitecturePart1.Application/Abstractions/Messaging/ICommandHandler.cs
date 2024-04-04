@@ -1,7 +1,7 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 using MediatR;
 
-namespace ClearArchitecture.Application.Abstractions.Messaging;
+namespace CleanArchitecture.Application.Abstractions.Messaging;
 
 public interface ICommandHandler<TCommand> : IRequestHandler<TCommand, Result> where TCommand : ICommand
 {

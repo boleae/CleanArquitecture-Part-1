@@ -1,5 +1,5 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Reviews.Events;
+namespace CleanArchitecture.Domain.Reviews.Events;
 
 public sealed record ReviewCreatedDomainEvent(Guid alquilerId):IDomainEvent;

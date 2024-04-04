@@ -1,6 +1,6 @@
 using MediatR.NotificationPublishers;
 
-namespace ClearArchitecture.Application.Vehiculos.SearchVehiculos;
+namespace CleanArchitecture.Application.Vehiculos.SearchVehiculos;
 
 public sealed class VehiculoResponse 
 {

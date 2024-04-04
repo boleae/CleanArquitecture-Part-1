@@ -1,8 +1,8 @@
-using ClearArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Application.Abstractions.Messaging;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace ClearArchitecture.Application.Abstractions.Behaviors;
+namespace CleanArchitecture.Application.Abstractions.Behaviors;
 
 public class LogginBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IBaseCommand
 {

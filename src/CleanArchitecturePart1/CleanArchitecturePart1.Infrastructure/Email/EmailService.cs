@@ -1,7 +1,7 @@
-using ClearArchitecture.Application.Abstractions.Email;
-using ClearArchitecture.Domain.Users;
+using CleanArchitecture.Application.Abstractions.Email;
+using CleanArchitecture.Domain.Users;
 
-namespace ClearArchitecture.Infrastructure;
+namespace CleanArchitecture.Infrastructure;
 
 internal sealed class EmailService : IEmailService
 {

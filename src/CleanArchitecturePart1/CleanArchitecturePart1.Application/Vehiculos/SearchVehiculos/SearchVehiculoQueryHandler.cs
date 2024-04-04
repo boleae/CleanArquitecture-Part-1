@@ -1,10 +1,10 @@
-using ClearArchitecture.Application.Abstractions.Data;
-using ClearArchitecture.Application.Abstractions.Messaging;
-using ClearArchitecture.Domain.Abstractions;
-using ClearArchitecture.Domain.Alquileres;
+using CleanArchitecture.Application.Abstractions.Data;
+using CleanArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Alquileres;
 using Dapper;
 
-namespace ClearArchitecture.Application.Vehiculos.SearchVehiculos;
+namespace CleanArchitecture.Application.Vehiculos.SearchVehiculos;
 
 internal sealed class SearchVehiculosQueryHandler
     : IQueryHandler<SearchVehiculosQuery, IReadOnlyList<VehiculoResponse>>

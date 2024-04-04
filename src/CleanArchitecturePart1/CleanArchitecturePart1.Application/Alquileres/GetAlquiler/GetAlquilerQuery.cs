@@ -1,5 +1,5 @@
-using ClearArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Application.Abstractions.Messaging;
 
-namespace ClearArchitecture.Application.Alquileres.GetAlquiler;
+namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
 
 public sealed record GetAlquilerQuery(Guid AlquilerId) : IQuery<AlquilerResponse>;

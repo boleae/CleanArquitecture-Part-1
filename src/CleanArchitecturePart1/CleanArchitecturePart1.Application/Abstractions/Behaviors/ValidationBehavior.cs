@@ -1,9 +1,9 @@
-using ClearArchitecture.Application.Abstractions.Messaging;
-using ClearArchitecture.Application.Exceptions;
+using CleanArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Application.Exceptions;
 using FluentValidation;
 using MediatR;
 
-namespace ClearArchitecture.Application.Abstractions.Behaviors;
+namespace CleanArchitecture.Application.Abstractions.Behaviors;
 
 public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IBaseCommand
 {

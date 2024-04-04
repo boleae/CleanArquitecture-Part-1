@@ -1,10 +1,10 @@
-using ClearArchitecture.Application.Abstractions.Clock;
-using ClearArchitecture.Application.Abstractions.Email;
-using ClearArchitecture.Infrastructure.Clock;
+using CleanArchitecture.Application.Abstractions.Clock;
+using CleanArchitecture.Application.Abstractions.Email;
+using CleanArchitecture.Infrastructure.Clock;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ClearArchitecture.Infrastructure;
+namespace CleanArchitecture.Infrastructure;
 
 public static class DependencyInjection
 {

@@ -1,5 +1,5 @@
-namespace ClearArchitecture.Application.Alquileres.ReservarAlquiler;
-using ClearArchitecture.Application.Abstractions.Messaging;
+namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
+using CleanArchitecture.Application.Abstractions.Messaging;
 
 public record ReservarAlquilerCommand(
     Guid VehiculoId,

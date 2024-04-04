@@ -1,8 +1,8 @@
 using System.Security.Cryptography.X509Certificates;
-using ClearArchitecture.Domain.Abstractions;
-using ClearArchitecture.Domain.Users.Events;
+using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Users.Events;
 
-namespace ClearArchitecture.Domain.Users;
+namespace CleanArchitecture.Domain.Users;
 
 public sealed class User : Entity
 {

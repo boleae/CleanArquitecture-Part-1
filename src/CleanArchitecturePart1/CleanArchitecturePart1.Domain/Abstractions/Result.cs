@@ -2,7 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Net.Http.Headers;
 using System.Runtime.InteropServices;
 
-namespace ClearArchitecture.Domain.Abstractions;
+namespace CleanArchitecture.Domain.Abstractions;
 
 public class Result 
 {

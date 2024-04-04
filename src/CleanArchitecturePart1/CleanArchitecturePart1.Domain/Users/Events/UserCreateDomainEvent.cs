@@ -1,5 +1,5 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Users.Events;
+namespace CleanArchitecture.Domain.Users.Events;
 
 public sealed record UserCreatedDomainEvent(Guid userId): IDomainEvent;

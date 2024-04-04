@@ -1,6 +1,6 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Reviews;
+namespace CleanArchitecture.Domain.Reviews;
 
 public sealed record Rating {
     public int Value {get;init;}

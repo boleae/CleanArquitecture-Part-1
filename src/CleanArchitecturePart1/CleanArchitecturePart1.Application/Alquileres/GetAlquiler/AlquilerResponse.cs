@@ -1,4 +1,4 @@
-namespace ClearArchitecture.Application.Alquileres.GetAlquiler;
+namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
 
 public sealed class AlquilerResponse {
     public Guid Id {get;init;}

@@ -1,7 +1,7 @@
 using System.Data;
 using FluentValidation;
 
-namespace ClearArchitecture.Application.Alquileres.ReservarAlquiler;
+namespace CleanArchitecture.Application.Alquileres.ReservarAlquiler;
 
 public class ReservarAlquilerCommandValidator : AbstractValidator<ReservarAlquilerCommand>
 {

@@ -1,9 +1,9 @@
-using ClearArchitecture.Application.Abstractions.Data;
-using ClearArchitecture.Application.Abstractions.Messaging;
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Application.Abstractions.Data;
+using CleanArchitecture.Application.Abstractions.Messaging;
+using CleanArchitecture.Domain.Abstractions;
 using Dapper;
 
-namespace ClearArchitecture.Application.Alquileres.GetAlquiler;
+namespace CleanArchitecture.Application.Alquileres.GetAlquiler;
 
 internal sealed class GetAlquilerQueryHandler : IQueryHandler<GetAlquilerQuery, AlquilerResponse>
 {

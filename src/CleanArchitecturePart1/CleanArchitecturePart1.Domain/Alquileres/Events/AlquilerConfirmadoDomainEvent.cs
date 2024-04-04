@@ -1,5 +1,5 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Alquileres.Events;
+namespace CleanArchitecture.Domain.Alquileres.Events;
 
 public sealed record AlquilerConfirmadoDomainEvent(Guid alquilerId):IDomainEvent;

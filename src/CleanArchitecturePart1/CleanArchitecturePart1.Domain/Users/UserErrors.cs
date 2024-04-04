@@ -1,6 +1,6 @@
-using ClearArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Abstractions;
 
-namespace ClearArchitecture.Domain.Users;
+namespace CleanArchitecture.Domain.Users;
 
 public static class UserErrors {
     public static Error NotFound = new(

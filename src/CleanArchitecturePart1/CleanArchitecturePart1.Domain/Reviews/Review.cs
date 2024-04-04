@@ -1,8 +1,8 @@
-using ClearArchitecture.Domain.Abstractions;
-using ClearArchitecture.Domain.Alquileres;
-using ClearArchitecture.Domain.Reviews.Events;
+using CleanArchitecture.Domain.Abstractions;
+using CleanArchitecture.Domain.Alquileres;
+using CleanArchitecture.Domain.Reviews.Events;
 
-namespace ClearArchitecture.Domain.Reviews;
+namespace CleanArchitecture.Domain.Reviews;
 
 public sealed class Review : Entity
 { 

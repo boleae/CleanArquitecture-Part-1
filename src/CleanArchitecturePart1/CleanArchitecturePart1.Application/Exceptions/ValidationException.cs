@@ -1,6 +1,6 @@
-using ClearArchitecture.Application.Abstractions.Behaviors;
+using CleanArchitecture.Application.Abstractions.Behaviors;
 
-namespace ClearArchitecture.Application.Exceptions;
+namespace CleanArchitecture.Application.Exceptions;
 
 public sealed class ValidationException : Exception
 {

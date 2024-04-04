@@ -1,6 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
 
-namespace ClearArchitecture.Domain.Abstractions;
+namespace CleanArchitecture.Domain.Abstractions;
 
 public abstract class Entity 
 {
