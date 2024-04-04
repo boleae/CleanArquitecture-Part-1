@@ -1,5 +1,6 @@
 using ClearArchitecture.Application.Abstractions.Behaviors;
 using ClearArchitecture.Domain.Alquileres;
+using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ClearArchitecture.Application;
@@ -11,8 +12,10 @@ public static class DependencyInjection
         services.AddMediatR(configuration => {
             configuration.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
             configuration.AddOpenBehavior(typeof(LogginBehavior<,>));
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
 
         });
+        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
         services.AddTransient<PrecioService>();
         return services;
     }
