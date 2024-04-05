@@ -9,4 +9,9 @@ public sealed class ApplicationDbContext : DbContext,IUnitOfWork
     {
 
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+    }
 }
