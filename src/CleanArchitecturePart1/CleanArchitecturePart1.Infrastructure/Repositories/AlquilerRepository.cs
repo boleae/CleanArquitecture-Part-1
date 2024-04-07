@@ -21,7 +21,7 @@ internal sealed class AlquilerRepository : Repository<Alquiler>, IAlquilerReposi
         return await DbContext.Set<Alquiler>()
             .AnyAsync(
                 alquiler => alquiler.VehiculoId == vehiculo.Id &&
-                alquiler.Duracion.Inicio <= duracion.Fin &&
+                alquiler.Duracion!.Inicio <= duracion.Fin &&
                 alquiler.Duracion.Fin >= duracion.Inicio &&
                 activeAlquilerStatuses.Contains(alquiler.Status),
                 cancellationToken
