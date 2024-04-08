@@ -30,7 +30,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
                 validationFailure.ErrorMessage
             )).ToList();
 
-        if(!validationErrors.Any())
+        if(validationErrors.Any())
             throw new Exceptions.ValidationException(validationErrors);
         
         return await next();
