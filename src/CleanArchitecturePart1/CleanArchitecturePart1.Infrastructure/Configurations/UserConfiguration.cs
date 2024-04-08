@@ -9,7 +9,7 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
     public void Configure(EntityTypeBuilder<User> builder)
     {
         builder.ToTable("users");
-        builder.HasKey("user_id");
+        builder.HasKey(user => user.Id);
 
         builder.Property(user => user.Nombre)
             .HasMaxLength(200)

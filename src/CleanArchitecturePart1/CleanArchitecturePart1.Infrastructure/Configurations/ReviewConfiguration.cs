@@ -12,7 +12,7 @@ internal sealed class ReviewConfiguration : IEntityTypeConfiguration<Review>
     public void Configure(EntityTypeBuilder<Review> builder)
     {
         builder.ToTable("reviews");
-        builder.HasKey("review_id");
+        builder.HasKey(review => review.Id);
         builder.Property(review => review.Rating)
             .HasConversion(rating => rating.Value, value => Rating.Create(value).Value);
         

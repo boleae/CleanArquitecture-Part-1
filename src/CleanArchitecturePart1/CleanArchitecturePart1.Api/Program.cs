@@ -1,5 +1,7 @@
+using CleanArchitecture.Api.Extensions;
 using CleanArchitecture.Application;
 using CleanArchitecture.Infrastructure;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -20,6 +22,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.ApplyMigration();
+app.SeedData();
 
 app.MapControllers();
 

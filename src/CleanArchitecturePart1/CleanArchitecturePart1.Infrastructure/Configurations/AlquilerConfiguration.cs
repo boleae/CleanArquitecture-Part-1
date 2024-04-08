@@ -12,7 +12,7 @@ internal sealed class AlquilerConfiguration : IEntityTypeConfiguration<Alquiler>
     public void Configure(EntityTypeBuilder<Alquiler> builder)
     {
         builder.ToTable("alquileres");
-        builder.HasKey("alquiler_id");
+        builder.HasKey(alquiler => alquiler.Id);
 
         builder.OwnsOne(alquiler => alquiler.PrecioPorPeriodo, precioBuilder => {
             precioBuilder.Property(moneda => moneda.TipoMoneda)
