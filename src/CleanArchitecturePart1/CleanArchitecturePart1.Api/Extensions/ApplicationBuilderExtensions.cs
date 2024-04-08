@@ -1,3 +1,4 @@
+using CleanArchitecture.Api.Middleware;
 using CleanArchitecture.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
@@ -25,5 +26,10 @@ public static class ApplicationBuilderExtensions
             }
         }
 
+    }
+
+    public static void UseCustomExtensionHandler(this IApplicationBuilder app)
+    {
+        app.UseMiddleware<ExceptionHandlingMiddleware>();
     }
 }

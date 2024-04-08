@@ -25,6 +25,7 @@ if (app.Environment.IsDevelopment())
 
 app.ApplyMigration();
 app.SeedData();
+app.UseCustomExtensionHandler();
 
 app.MapControllers();
 
