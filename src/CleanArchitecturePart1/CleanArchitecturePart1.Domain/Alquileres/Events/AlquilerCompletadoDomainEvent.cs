@@ -2,4 +2,4 @@ using CleanArchitecture.Domain.Abstractions;
 
 namespace CleanArchitecture.Domain.Alquileres.Events;
 
-public sealed record AlquilerCompletadoDomainEvent(Guid alquilerId):IDomainEvent;
+public sealed record AlquilerCompletadoDomainEvent(AlquilerId alquilerId):IDomainEvent;

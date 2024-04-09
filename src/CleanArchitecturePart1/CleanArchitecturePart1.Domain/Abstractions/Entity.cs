@@ -2,20 +2,20 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace CleanArchitecture.Domain.Abstractions;
 
-public abstract class Entity 
+public abstract class Entity<TEntityId> : IEntity
 {
 
     protected Entity() {
 
     }
     private readonly List<IDomainEvent> _domainEvents = new();
-    protected Entity(Guid id) 
+    protected Entity(TEntityId id) 
     {
         Id = id;
     }
     
     //El Init hace que el Id nunca cambien
-    public Guid Id {get;init;}
+    public TEntityId? Id {get;init;}
 
     public IReadOnlyList<IDomainEvent> GetDomainEvents() {
         return _domainEvents.ToList();
@@ -28,5 +28,6 @@ public abstract class Entity
     protected void RaiseDomainEvent(IDomainEvent domainEvent) {
         _domainEvents.Add(domainEvent);
     }
+
 
 }
