@@ -25,7 +25,7 @@ public ReservarAlquilerDomainEventHandler(IAlquilerRepository alquilerRepository
         var alquiler = await _alquilerRepository.GetByIdAsync(notification.alquilerId, cancellationToken);
         if(alquiler is null)
             return;
-        var user = await _userRepository.GetByIdAsync(alquiler.UserId, cancellationToken);
+        var user = await _userRepository.GetByIdAsync(alquiler.UserId!, cancellationToken);
         if(user is null)
             return;
         await _emailService.SendAsync(user.Email!, "Alquiler reservado", "Tienes que confirmar esta reserva, de lo contrario se perderá");
