@@ -23,7 +23,7 @@ public static class DependencyInjection
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
         services.AddTransient<IEmailService, EmailService>();
 
-        var connectionString = configuration.GetConnectionString("Database") ?? throw new ArgumentNullException(nameof(configuration));
+        var connectionString = configuration.GetConnectionString("ConnectionString") ?? throw new ArgumentNullException(nameof(configuration));
 
         services.AddDbContext<ApplicationDbContext>(options => {
             options.UseNpgsql(connectionString).UseSnakeCaseNamingConvention();

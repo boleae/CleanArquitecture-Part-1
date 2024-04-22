@@ -6,3 +6,10 @@ src/CleanArchitecturePart1/CleanArchitecturePart1.Infrastructure/obj/
 src/CleanArchitecturePart1/CleanArchitecturePart1.Infrastructure/bin/
 src/CleanArchitecturePart1/CleanArchitecturePart1.Api/bin/
 src/CleanArchitecturePart1/CleanArchitecturePart1.Api/obj/
+.containers/
+test/CleanArchitecturePart1/CleanArchitecture.Api.FunctionalTest/obj/
+test/CleanArchitecturePart1/CleanArchitecture.Application.UnitTest/obj/
+test/CleanArchitecturePart1/CleanArchitecture.Domain.UnitTest/obj/
+test/CleanArchitecturePart1/CleanArchitecture.Domain.UnitTest/bin/
+test/CleanArchitecturePart1/CleanArchitecture.Application.IntegrationTest/obj/
+test/CleanArchitecturePart1/CleanArchitecture.ArchitectureTest/obj/

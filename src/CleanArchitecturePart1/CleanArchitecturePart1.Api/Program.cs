@@ -37,8 +37,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.ApplyMigration();
+await app.ApplyMigration();
 app.SeedData();
+app.SeedDataAuthentication();
 app.UseCustomExtensionHandler();
 
 app.UseAuthentication();
