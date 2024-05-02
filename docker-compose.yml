@@ -8,3 +8,5 @@ services:
     build:
       context: .
       dockerfile: src/CleanArchitecturePart1/CleanArchitecturePart1.Api/Dockerfile
+  serilogseq:
+    image: datalust/seq:2023.4

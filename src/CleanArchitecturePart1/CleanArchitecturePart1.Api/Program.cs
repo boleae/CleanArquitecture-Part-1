@@ -6,9 +6,14 @@ using CleanArchitecture.Infrastructure;
 using CleanArchitecture.Infrastructure.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration)
+);
+
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(
     JwtBearerDefaults.AuthenticationScheme
@@ -44,6 +49,7 @@ await app.ApplyMigration();
 app.SeedData();
 app.SeedDataAuthentication();
 app.UseCustomExtensionHandler();
+app.UseSerilogRequestLogging();
 
 app.UseAuthentication();
 app.UseAuthorization();
