@@ -48,8 +48,10 @@ if (app.Environment.IsDevelopment())
 await app.ApplyMigration();
 app.SeedData();
 app.SeedDataAuthentication();
-app.UseCustomExtensionHandler();
+
+app.UseRequestContextLogging();
 app.UseSerilogRequestLogging();
+app.UseCustomExtensionHandler();
 
 app.UseAuthentication();
 app.UseAuthorization();
