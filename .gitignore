@@ -14,3 +14,4 @@ test/CleanArchitecturePart1/CleanArchitecture.Domain.UnitTest/bin/
 test/CleanArchitecturePart1/CleanArchitecture.Application.IntegrationTest/obj/
 test/CleanArchitecturePart1/CleanArchitecture.ArchitectureTest/obj/
 test/CleanArchitecturePart1/CleanArchitecture.Application.UnitTest/bin/
+test/CleanArchitecturePart1/CleanArchitecture.Application.IntegrationTest/bin/
