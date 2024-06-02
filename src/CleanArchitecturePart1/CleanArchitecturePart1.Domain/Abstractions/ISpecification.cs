@@ -12,6 +12,6 @@ where EntityId : class
     Expression<Func<TEntity, object>>? OrderByDescending {get;} 
     int Take {get;}
     int Skip {get;}
-    bool Status {get;}
+    bool IsPagingEnable {get;}
 
 }
